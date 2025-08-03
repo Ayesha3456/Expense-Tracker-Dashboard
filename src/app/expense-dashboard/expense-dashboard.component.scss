@@ -1,0 +1,33 @@
+.dashboard {
+    .card {
+      border-radius: 0.75rem;
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  
+    .card-body {
+      font-size: 1.25rem;
+    }
+  
+    table {
+      thead {
+        background-color: #f8f9fa;
+      }
+  
+      td, th {
+        vertical-align: middle;
+      }
+    }
+  
+    button {
+      transition: 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  

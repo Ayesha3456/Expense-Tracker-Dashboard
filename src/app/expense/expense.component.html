@@ -1,0 +1,41 @@
+<div class="modal-backdrop fade show"></div>
+<div class="modal d-block" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Add Expense/Income</h5>
+        <button type="button" class="btn-close" (click)="cancel.emit()"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="type" class="form-label">Type</label>
+            <select class="form-select" [(ngModel)]="formData.type" name="type">
+              <option value="" disabled selected>Select Type</option>
+              <option value="Expense">Expense</option>
+              <option value="Income">Income</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="formData.name" name="name">
+          </div>
+
+          <div class="mb-3">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" [(ngModel)]="formData.amount" name="amount">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="cancel.emit()">Cancel</button>
+        <button class="btn btn-primary" (click)="onSave()">Save</button>
+      </div>
+
+    </div>
+  </div>
+</div>
